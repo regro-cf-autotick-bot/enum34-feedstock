@@ -16,7 +16,7 @@ build:
   number: 1001
   skip: true  # [py>=34]
   script: "{{ PYTHON }} -m pip install ./hidden --no-deps --ignore-installed --no-cache-dir -vvv"  # [not win]
-  script: "{{ PYTHON }} -m pip install .\hidden --no-deps --ignore-installed --no-cache-dir -vvv"  # [win]
+  script: "{{ PYTHON }} -m pip install .\\hidden --no-deps --ignore-installed --no-cache-dir -vvv"  # [win]
 
 requirements:
   host:
