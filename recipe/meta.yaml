@@ -10,11 +10,13 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  folder: hidden
 
 build:
   number: 1001
   skip: true  # [py>=34]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install ./hidden --no-deps --ignore-installed --no-cache-dir -vvv"  # [not win]
+  script: "{{ PYTHON }} -m pip install .\hidden --no-deps --ignore-installed --no-cache-dir -vvv"  # [win]
 
 requirements:
   host:
