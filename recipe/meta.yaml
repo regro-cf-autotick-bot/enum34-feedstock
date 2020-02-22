@@ -1,15 +1,12 @@
-{% set name = "enum34" %}
 {% set version = "1.1.8" %}
-{% set sha256 = "36db3d880f7a9a4989b1dfba625381a82294d1d3cfaa62bbbf18b594e195fa31" %}
 
 package:
-  name: {{ name|lower }}
+  name: enum34
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/e/enum34/enum34-{{ version }}.tar.gz
+  sha256: 36db3d880f7a9a4989b1dfba625381a82294d1d3cfaa62bbbf18b594e195fa31
   folder: hidden
 
 build:
@@ -22,17 +19,21 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
   run:
     - python
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - enum
 
 about:
   home: https://bitbucket.org/stoneleaf/enum34
-  license: BSD 3-Clause
+  license: BSD-3-Clause
+  license_file: hidden/enum/LICENSE
   summary: 'Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4'
 
 extra:
