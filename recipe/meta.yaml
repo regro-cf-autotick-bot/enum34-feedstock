@@ -1,4 +1,4 @@
-{% set version = "1.1.8" %}
+{% set version = "1.1.9" %}
 
 package:
   name: enum34
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/enum34/enum34-{{ version }}.tar.gz
-  sha256: 36db3d880f7a9a4989b1dfba625381a82294d1d3cfaa62bbbf18b594e195fa31
+  sha256: 13ef9a1c478203252107f66c25b99b45b1865693ca1284aab40dafa7e1e7ac17
   folder: hidden
 
 build:
