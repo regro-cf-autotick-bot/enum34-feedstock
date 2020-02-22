@@ -1,6 +1,6 @@
 {% set name = "enum34" %}
-{% set version = "1.1.6" %}
-{% set sha256 = "8ad8c4783bf61ded74527bffb48ed9b54166685e4230386a9ed9b1279e2df5b1" %}
+{% set version = "1.1.8" %}
+{% set sha256 = "36db3d880f7a9a4989b1dfba625381a82294d1d3cfaa62bbbf18b594e195fa31" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   folder: hidden
 
 build:
-  number: 1002
+  number: 0
   script: "{{ PYTHON }} --version"  # [py>=34]
   script: "{{ PYTHON }} -m pip install ./hidden --no-deps --ignore-installed --no-cache-dir -vvv"   # [(not win) and (not py>=34)]
   script: "{{ PYTHON }} -m pip install .\\hidden --no-deps --ignore-installed --no-cache-dir -vvv"  # [win and (not py>=34)]
