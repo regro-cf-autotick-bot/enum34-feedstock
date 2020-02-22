@@ -3,7 +3,7 @@ About enum34
 
 Home: https://bitbucket.org/stoneleaf/enum34
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
