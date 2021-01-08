@@ -10,7 +10,7 @@ source:
   folder: hidden
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} --version  # [py>=34]
   script: {{ PYTHON }} -m pip install ./hidden --no-deps --ignore-installed --no-cache-dir -vvv  # [(not win) and (not py>=34)]
   script: {{ PYTHON }} -m pip install .\hidden --no-deps --ignore-installed --no-cache-dir -vvv  # [win and (not py>=34)]
